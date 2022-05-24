@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b29f0461-1360-4266-a379-ed3337c08df2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/DependencyInjection/BaseballCoach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DependencyInjection/Coach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DependencyInjection/FortuneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DependencyInjection/HappyFortuneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DependencyInjection/HarshFortuneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DependencyInjection/HelloSpringApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DependencyInjection/TrackCoach.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/applicationContext.xml" afterDir="false" />
     </list>
@@ -36,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/tpool/Playground/Udemy/Spring/Git_Notes/Spring_notes/src",
+    "last_opened_file_path": "/home/tpool/Playground/Udemy/Spring/Git_Notes/Spring_notes/src/DependencyInjection",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
@@ -45,11 +52,25 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/DependencyInjection" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HelloSpringApp">
+  <component name="RunManager" selected="Application.DependencyInjection.HelloSpringApp">
+    <configuration name="DependencyInjection.HelloSpringApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DependencyInjection.HelloSpringApp" />
+      <module name="Spring_notes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DependencyInjection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelloSpringApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="javaBeans.HelloSpringApp" />
       <module name="Spring_notes" />
@@ -78,6 +99,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DependencyInjection.HelloSpringApp" />
         <item itemvalue="Application.HelloSpringApp" />
         <item itemvalue="Application.MyApp" />
       </list>
@@ -91,7 +113,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653411601864</updated>
-      <workItem from="1653411603201" duration="3311000" />
+      <workItem from="1653411603201" duration="5851000" />
     </task>
     <servers />
   </component>

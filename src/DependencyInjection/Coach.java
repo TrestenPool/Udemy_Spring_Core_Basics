@@ -1,0 +1,8 @@
+package DependencyInjection;
+
+public interface Coach {
+
+    public String getDailyWorkout();
+
+    public String getDailyFortune();
+}
