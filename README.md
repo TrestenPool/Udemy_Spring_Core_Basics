@@ -160,3 +160,10 @@ And to assign a value is easy as: `value="${team.email}"`
 > <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/pic3.png?raw=true">
 
 ---
+
+#### Setter Injection & @Qualifer keyword
+> Similiarily to the example above the coach has a fortune field. We are able to inject the dependency into the setter method by using the **@Autowired** keyword above the setter method. Also since there are two classes that implement the Fortune interface `HappyFortune and MadFortune`, we have to use the **@Qualifer()** keyword along with the beanID as the parameters in order to inject the correct dependency.
+
+> <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/pic4.png?raw=true">
+
+---
