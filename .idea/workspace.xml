@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b29f0461-1360-4266-a379-ed3337c08df2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/annotation_basics-applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/annotation_basics/BaseballCoach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/annotation_basics/Coach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/annotation_basics/HelloApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean_scope-applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean_scope-applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bean_scopes/BaseballCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bean_scopes/BaseballCoach.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +59,11 @@
       <recent name="$PROJECT_DIR$/src/Setter_DI" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="annotation_basics" />
       <recent name="literal_values" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.bean_scopes.HelloSpringApp">
+  <component name="RunManager" selected="Application.HelloApp">
     <configuration name="Dependency_Injection.HelloSpringApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Dependency_Injection.HelloSpringApp" />
       <module name="Spring_notes" />
@@ -74,12 +77,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloSpringApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaBeans.HelloSpringApp" />
+    <configuration name="HelloApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="annotation_basics.HelloApp" />
       <module name="Spring_notes" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="javaBeans.*" />
+          <option name="PATTERN" value="annotation_basics.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,8 +90,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaBeans.MyApp" />
+    <configuration name="HelloSpringApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaBeans.HelloSpringApp" />
       <module name="Spring_notes" />
       <extension name="coverage">
         <pattern>
@@ -128,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HelloApp" />
         <item itemvalue="Application.bean_scopes.HelloSpringApp" />
         <item itemvalue="Application.Dependency_Injection.HelloSpringApp" />
         <item itemvalue="Application.literal_values.HelloSpringApp" />
         <item itemvalue="Application.HelloSpringApp" />
-        <item itemvalue="Application.MyApp" />
       </list>
     </recent_temporary>
   </component>
@@ -147,7 +150,7 @@
       <workItem from="1653411603201" duration="7911000" />
       <workItem from="1653436418344" duration="351000" />
       <workItem from="1653436782913" duration="165000" />
-      <workItem from="1653436962005" duration="13312000" />
+      <workItem from="1653436962005" duration="15954000" />
     </task>
     <servers />
   </component>
