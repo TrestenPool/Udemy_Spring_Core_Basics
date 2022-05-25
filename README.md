@@ -200,3 +200,32 @@ And to assign a value is easy as: `value="${team.email}"`
 >}
 
 ---
+
+#### Bean LifeCycle with Annotations (@PostConstruct & @PreDestroy)
+> Similiar to the init-method and destroy-method in the xml configuration of the lifecycle of the bean we can also specify certain methods to run at the creation of the spring bean and at the end of the beans life.
+
+> These two annotations are **`@PostConstruct & @PreDestroy`**
+
+> Example:
+> ```
+> @Component
+> public class BaseballCoach implements Coach {
+> 
+>   // invoked after creation
+>   @PostConstruct
+>   public void drawupBattingOrder(){}
+>   .
+>   .
+>   .
+>   // invoked right before bean is destroyed
+>   @PreDestroy
+>   public void yellAtPlayers(){}
+> }
+> ```
+> 💡Note:
+> + The methods can have any access modifer
+> + since you cannot capture the value, typically only void is used for the return type
+> + the method cannot accept any arguments. The methods should not take in any arguments.
+> + If a bean has a scope of **prototype** the **@PreDestroy** annotation will not be invoked. Since Spring does **NOT** manage the complete lifecylce of a prototype bean.
+
+---
