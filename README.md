@@ -149,6 +149,7 @@ And to assign a value is easy as: `value="${team.email}"`
 >>  }
 >> }
 >> ```
+>> If no bean ID is provided in this case **coach1** in @Component("coach1"), then Spring will create a bean with the default name of the class in camelCase. So in this case it would've been **baseballCoach**.
 > 3. Retrieve bean from the Spring Container
 >> `BaseballCoach coach = context.getBean("coach1", BaseballCoach.class);`
 
