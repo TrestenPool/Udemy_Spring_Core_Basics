@@ -17,26 +17,36 @@
 
         <!-- CONSTRUCTOR INJECTION -->
         <!-- creates the dependency -->
-        <bean id="headCoach_fortune" class="Dependency_Injection.HarshFortuneService">
-        </bean>
+<!--        <bean id="headCoach_fortune" class="Dependency_Injection.HarshFortuneService">-->
+<!--        </bean>-->
 
         <!-- Inject the dependency through the constructor -->
-        <bean id="headCoach" class="Dependency_Injection.BaseballCoach">
-            <constructor-arg ref="headCoach_fortune" />
-        </bean>
+<!--        <bean id="headCoach" class="Dependency_Injection.BaseballCoach">-->
+<!--            <constructor-arg ref="headCoach_fortune" />-->
+<!--        </bean>-->
 
         <!-- SETTER INJECTION -->
         <!-- creates the dependency -->
-        <bean id="headCoach2_fortune" class="Dependency_Injection.HappyFortuneService">
-        </bean>
+<!--        <bean id="headCoach2_fortune" class="Dependency_Injection.HappyFortuneService">-->
+<!--        </bean>-->
 
         <!-- Inject the dependency through the setter method -->
-        <bean id="headCoach2" class="Dependency_Injection.TrackCoach">
-            <property name="fortuneService" ref="headCoach2_fortune" />
-        </bean>
+<!--        <bean id="headCoach2" class="Dependency_Injection.TrackCoach">-->
+<!--            <property name="fortuneService" ref="headCoach2_fortune" />-->
+<!--        </bean>-->
 
     <!-- End Dependency Injection -->
 
+
+
+
+
+    <!-- Injecting Literal Values -->
+    <bean id="baseballCoach" class="literal_values.BaseballCoach">
+        <property name="emailAddress" value="hitDingers@gmail.com"/>
+        <property name="teamName" value="Bomb Squad"/>
+    </bean>
+    <!-- END OF Injecting Literal Values -->
 
 
 </beans>
