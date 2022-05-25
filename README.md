@@ -60,3 +60,11 @@ To inject the dependency via the setter method we use `<property name="fortuneSe
 <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/dependencyInjection_appcontext.png?raw=true" height="400">
 
 ---
+
+#### Injecting literal Values
+
+If we wanted to inject literal values we would just use `<property>` tag with the `value` attribute specifying the value of the literal value shown below.
+
+<img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/injecting_literal_values.png?raw=true">
+
+---
