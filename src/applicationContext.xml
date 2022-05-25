@@ -14,14 +14,27 @@
     <!-- End JavaBean -->
 
     <!-- Dependency Injection -->
-    <!--  Creates the fortune dependency -->
-    <bean id="myFortuneService" class="DependencyInjection.HarshFortuneService">
-    </bean>
 
-    <!--  Creates the coach object and inject fortune dependency -->
-    <bean id="myCoach" class="DependencyInjection.BaseballCoach">
-        <constructor-arg ref="myFortuneService" />
-    </bean>
+        <!-- CONSTRUCTOR INJECTION -->
+        <!-- creates the dependency -->
+        <bean id="headCoach_fortune" class="Dependency_Injection.HarshFortuneService">
+        </bean>
+
+        <!-- Inject the dependency through the constructor -->
+        <bean id="headCoach" class="Dependency_Injection.BaseballCoach">
+            <constructor-arg ref="headCoach_fortune" />
+        </bean>
+
+        <!-- SETTER INJECTION -->
+        <!-- creates the dependency -->
+        <bean id="headCoach2_fortune" class="Dependency_Injection.HappyFortuneService">
+        </bean>
+
+        <!-- Inject the dependency through the setter method -->
+        <bean id="headCoach2" class="Dependency_Injection.TrackCoach">
+            <property name="fortuneService" ref="headCoach2_fortune" />
+        </bean>
+
     <!-- End Dependency Injection -->
 
 

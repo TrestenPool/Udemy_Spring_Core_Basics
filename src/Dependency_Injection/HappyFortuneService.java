@@ -1,4 +1,4 @@
-package DependencyInjection;
+package Dependency_Injection;
 
 public class HappyFortuneService implements FortuneService{
 

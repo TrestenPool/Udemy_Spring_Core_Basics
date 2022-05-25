@@ -1,17 +1,17 @@
-package DependencyInjection;
+package Dependency_Injection;
 
-public class TrackCoach implements Coach {
+public class BaseballCoach implements Coach {
 
     private FortuneService fortuneService;
 
     // constructor
-    public TrackCoach(FortuneService fortuneService) {
+    public BaseballCoach(FortuneService fortuneService) {
         this.fortuneService = fortuneService;
     }
 
     @Override
-    public String getDailyWorkout() {
-        return "Run a hard 5k";
+    public String getDailyWorkout(){
+        return "Spend 30 minutes on batting practice";
     }
 
     @Override
