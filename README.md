@@ -123,3 +123,36 @@ And to assign a value is easy as: `value="${team.email}"`
 :warning: Be Aware that the scope for the bean has to be **singleton** in order for the destroy method to be invoked. Meaning that the **destroy-method does not work if the bean scope is prototype**
 
 ---
+
+### Spring Annotations
+---
+
+#### Basics About Annotations
+> Pros
+> + Less Code
+> + Minimizes XML Configuration
+
+> Cons
+> + Harder to manage since it is not defined in one location like the applicationContext.xml file
+> + Requires component scanning meaning it has to scan your entire project for components.
+
+> Development Process 
+> 1. Enable *recursive* component scanning in the Spring Config File 
+>> ` <context:compent-scan base-package="com.cib599.springDemo"\> `
+> 2. Add the **@Component** Annotation to your java classes
+>> ``` 
+>> @Component("coach1")
+>> public class BaseballCoach implements Coach{
+>>  @Override
+>>  public String getDailyWorkout(){
+>>    return "Got hit off of the Tee.";
+>>  }
+>> }
+>> ```
+> 3. Retrieve bean from the Spring Container
+>> `BaseballCoach coach = context.getBean("coach1", BaseballCoach.class);`
+
+
+
+
+--- 
