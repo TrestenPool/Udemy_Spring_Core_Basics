@@ -9,6 +9,16 @@ public class BaseballCoach implements Coach {
     public BaseballCoach() {
     }
 
+    // init method
+    public void init(){
+        System.out.println("init() method called");
+    }
+
+    // cleanup method
+    public void cleanup(){
+        System.out.println("cleanup() method called");
+    }
+
     @Override
     public String getDailyWorkout(){
         return "Spend 30 minutes on batting practice";

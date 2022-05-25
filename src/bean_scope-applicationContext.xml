@@ -7,7 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="coach1" class="bean_scopes.BaseballCoach" scope="prototype">
+    <bean id="coach1" class="bean_scopes.BaseballCoach" scope="singleton"
+    init-method="init" destroy-method="cleanup">
     </bean>
 
 </beans>
