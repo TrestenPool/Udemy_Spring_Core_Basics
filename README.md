@@ -164,6 +164,26 @@ And to assign a value is easy as: `value="${team.email}"`
 #### Setter Injection & @Qualifer keyword
 > Similiarily to the example above the coach has a fortune field. We are able to inject the dependency into the setter method by using the **@Autowired** keyword above the setter method. Also since there are two classes that implement the Fortune interface `HappyFortune and MadFortune`, we have to use the **@Qualifer()** keyword along with the beanID as the parameters in order to inject the correct dependency.
 
+> :bulb:: It does not have to be named setFortune(), but any method name with the `@Autowired` keyword above it.
+
 > <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/pic4.png?raw=true">
+
+---
+
+#### Field Injection (Java Reflection)
+> We can inject dependencies by setting field values on your class directly (even private fields)
+> This is accomplished by using **Java Reflection**
+
+> ```
+> public class TennisCoach implements Coach{
+>   @Autowired
+>   private Fortune fortune;
+>
+>   public TennisCoach(){ }
+>   
+>   //no need for setter and getter methods
+> }
+> ```
+> There is no need for setter/getter methods because spring will inject the dependency for us to use!
 
 ---
