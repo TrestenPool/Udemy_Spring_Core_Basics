@@ -229,3 +229,29 @@ And to assign a value is easy as: `value="${team.email}"`
 > + If a bean has a scope of **prototype** the **@PreDestroy** annotation will not be invoked. Since Spring does **NOT** manage the complete lifecylce of a prototype bean.
 
 ---
+
+### Spring Configuration with Java Code
+---
+
+#### Steps in order to configure spring with only java code
+1. Create a Java class and annotate as: **`@Configuration`** and add component scanning support: **`@ComponentScan`**
+
+```
+@Configuration
+@ComponentScan("annotation_basics")
+public class SportConfig {
+  // do other config here
+}
+```
+
+2. Read Spring Java configuration class 
+ 
+`AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportConfig.class);`
+
+3. Retrieve bean from Spring Container
+
+`Coach coach = context.getBean("baseballCoach", Coach.class);`
+
+---
+
+#### 
