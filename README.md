@@ -68,3 +68,23 @@ If we wanted to inject literal values we would just use `<property>` tag with th
 <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/injecting_literal_values.png?raw=true">
 
 ---
+
+#### Injecting values from a properties file
+:open_file_folder:dependencyInjection
+
+A .properties file was created named `sport.properties` in the same directory as the `applicationContext.xml` file
+
+<img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/sportsproperties_file.png?raw=true">
+
+The sport.properties follows a basic syntax of `objectName.propertyName=somevalue`
+
+<img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/pic2.png?raw=true">
+
+In order to reference the .properties file from the applicationContext.xml the following line is needed to make the reference to it
+`<context:property-placeholder location="sport.properties"/>`
+
+And to assign a value is easy as: `value="${team.email}"`
+
+<img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/pic1.png?raw=true">
+
+---
