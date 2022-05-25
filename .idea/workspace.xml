@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b29f0461-1360-4266-a379-ed3337c08df2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/annotation_basics-applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/annotation_basics/BaseballCoach.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/annotation_basics/Coach.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/annotation_basics/HelloApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/annotation_basics/Fortune.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/annotation_basics/HappyFortune.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/annotation_basics/MadFortune.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/annotation_basics/BaseballCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation_basics/BaseballCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/annotation_basics/Coach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation_basics/Coach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/annotation_basics/HelloApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/annotation_basics/HelloApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +152,7 @@
       <workItem from="1653411603201" duration="7911000" />
       <workItem from="1653436418344" duration="351000" />
       <workItem from="1653436782913" duration="165000" />
-      <workItem from="1653436962005" duration="15954000" />
+      <workItem from="1653436962005" duration="17657000" />
     </task>
     <servers />
   </component>

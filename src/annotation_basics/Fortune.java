@@ -1,8 +1,5 @@
 package annotation_basics;
 
-public interface Coach {
-
-    public String getDailyWorkout();
-
+public interface Fortune {
     public String getDailyFortune();
 }

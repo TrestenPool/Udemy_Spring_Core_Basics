@@ -8,9 +8,10 @@ public class HelloApp {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("annotation_basics-applicationContext.xml");
 
         // retrieve the bean
-        BaseballCoach coach = context.getBean("coach1", BaseballCoach.class);
+        Coach coach = context.getBean("baseballCoach", Coach.class);
 
         System.out.println(coach.getDailyWorkout());
+        System.out.println(coach.getDailyFortune());
 
         // close the appcontext file
         context.close();
