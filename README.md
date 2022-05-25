@@ -153,7 +153,10 @@ And to assign a value is easy as: `value="${team.email}"`
 > 3. Retrieve bean from the Spring Container
 >> `BaseballCoach coach = context.getBean("coach1", BaseballCoach.class);`
 
-
-
-
 --- 
+
+#### Constructor Injection & @Qualifer keyword
+> In this example we have the BaseballCoach having a constructor that takes in a Fortune. If there was only one fortune bean that we would not have to use the @Qualifer keyword. But since there are more than one class that implements the **Fortune** interface we have to specify in the BaseballCoach constructor the qualifying bean to be injected. In this case it is **`@Qualifer("happyFortune")`**
+> <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/pic3.png?raw=true">
+
+---
