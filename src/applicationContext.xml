@@ -13,6 +13,9 @@
 <!--    </bean>-->
     <!-- End JavaBean -->
 
+
+
+
     <!-- Dependency Injection -->
 
         <!-- CONSTRUCTOR INJECTION -->
@@ -42,11 +45,20 @@
 
 
     <!-- Injecting Literal Values -->
+<!--    <bean id="baseballCoach" class="literal_values.BaseballCoach">-->
+<!--        <property name="emailAddress" value="hitDingers@gmail.com"/>-->
+<!--        <property name="teamName" value="Bomb Squad"/>-->
+<!--    </bean>-->
+
+    <context:property-placeholder location="sport.properties"/>
     <bean id="baseballCoach" class="literal_values.BaseballCoach">
-        <property name="emailAddress" value="hitDingers@gmail.com"/>
-        <property name="teamName" value="Bomb Squad"/>
+        <property name="emailAddress" value="${team.email}"/>
+        <property name="teamName" value="${team.name}"/>
     </bean>
     <!-- END OF Injecting Literal Values -->
+
+
+
 
 
 </beans>
