@@ -32,7 +32,7 @@ And finally close the config file pointer with
 <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/javaBean_spring_app.png?raw=true" width="425" height="200">
 
 ---
-#### Dependency Injection
+#### Dependency Injection (Constructor injection)
 :open_file_folder:dependencyInjection
 
 We have added a dependency being an object that implements the FortuneService interface. The FortuneService interface has one method `getFortune()` Two classes implement the interface being HappyFortuneService and HarshFortuneService. The Coach interface now has a method called `getDailyFortune()` that will call the private field fortuneService and print out its fortune.
@@ -48,3 +48,15 @@ And same as before we can call the methods on our coach object just like normal 
 
 ---
 
+#### Dependency Injection (Setter injection)
+:open_file_folder:dependencyInjection
+
+In order to use setter based injection simply have a setter method in the Track Coach class:
+
+<img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/dependencyInjection_trackCoach.png?raw=true" width="450">
+
+To inject the dependency via the setter method we use `<property name="fortuneService" ref="headCoach2_fortune" />`
+
+<img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/dependencyInjection_appcontext.png?raw=true" height="400">
+
+---
