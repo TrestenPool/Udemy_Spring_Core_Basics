@@ -109,3 +109,17 @@ And to assign a value is easy as: `value="${team.email}"`
 
 ---
 
+#### Bean Init and Destroy methods 
+:open_file_folder: bean_scope
+
+:page_facing_up: bean_scope-applicationContext.xml
+
+> When configuring your beans in the .xml file, you have the option to add a **init-method** & **destroy-method**.
+>> The **init-method** is invoked when the spring container first creates the bean, and the **destroy-method** is called when the **Spring Container** is shutting down.
+> These methods can have any access modifer ex. `public, private, protected`. These methods are specified during the configuration of the bean. An example of the execution can be seen below
+
+<img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/beanLifecyle.png?raw=true">
+
+:warning: Be Aware that the scope for the bean has to be **singleton** in order for the destroy method to be invoked. Meaning that the **destroy-method does not work if the bean scope is prototype**
+
+---
