@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b29f0461-1360-4266-a379-ed3337c08df2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sport.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bean_scope-applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bean_scopes/BaseballCoach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bean_scopes/Coach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bean_scopes/HelloSpringApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/applicationContext.xml" afterDir="false" />
     </list>
@@ -37,7 +40,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/tpool/Playground/Udemy/Spring/Git_Notes/Spring_notes/src/literal_values",
+    "last_opened_file_path": "/home/tpool/Playground/Udemy/Spring/Git_Notes/Spring_notes/src/bean_scopes",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -50,17 +53,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/bean_scopes" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Dependency_Injection" />
       <recent name="$PROJECT_DIR$/src/literal_values" />
       <recent name="$PROJECT_DIR$/src/Setter_DI" />
-      <recent name="$PROJECT_DIR$/src/DependencyInjection" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="literal_values" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.literal_values.HelloSpringApp">
+  <component name="RunManager" selected="Application.bean_scopes.HelloSpringApp">
     <configuration name="Dependency_Injection.HelloSpringApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Dependency_Injection.HelloSpringApp" />
       <module name="Spring_notes" />
@@ -100,6 +103,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="bean_scopes.HelloSpringApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bean_scopes.HelloSpringApp" />
+      <module name="Spring_notes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bean_scopes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="literal_values.HelloSpringApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="literal_values.HelloSpringApp" />
       <module name="Spring_notes" />
@@ -115,8 +131,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.literal_values.HelloSpringApp" />
+        <item itemvalue="Application.bean_scopes.HelloSpringApp" />
         <item itemvalue="Application.Dependency_Injection.HelloSpringApp" />
+        <item itemvalue="Application.literal_values.HelloSpringApp" />
         <item itemvalue="Application.HelloSpringApp" />
         <item itemvalue="Application.MyApp" />
       </list>
@@ -133,7 +150,7 @@
       <workItem from="1653411603201" duration="7911000" />
       <workItem from="1653436418344" duration="351000" />
       <workItem from="1653436782913" duration="165000" />
-      <workItem from="1653436962005" duration="8534000" />
+      <workItem from="1653436962005" duration="11649000" />
     </task>
     <servers />
   </component>
