@@ -187,3 +187,16 @@ And to assign a value is easy as: `value="${team.email}"`
 > There is no need for setter/getter methods because spring will inject the dependency for us to use!
 
 ---
+
+#### Bean Scope with Annotations
+> As with xml, we can also specify the bean scope with annotations. All you have to do is specify the bean scope with the **`@Scope()`** annotations under the **`@Component`** annotation.
+
+> Example:
+> ```
+>@Component
+>@Scope("singleton")
+>public class BaseballCoach implements Coach{
+> // class info
+>}
+
+---
