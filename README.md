@@ -88,3 +88,24 @@ And to assign a value is easy as: `value="${team.email}"`
 <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/pic1.png?raw=true">
 
 ---
+
+#### Bean Scope (singleton vs prototype)
+:open_file_folder: bean_scope
+
+:page_facing_up: bean_scope-applicationContext.xml
+
+> By default if you do not specify the `scope` attribute in the bean property it wil default to **singleton**. The singleton bean scope means that everytime a request to the spring container is made for a bean it will return a reference to the same object as before. The other bean scope is **prototype**. The protoype bean scope means that every time a reqest for a bean is made to the spring container it will create a new instance of the bean and return it. 
+
+> In this example we have a private variable called **key** in the BaseballCoach class that is only accessible via its getters and setters. If we leave the bean scope as singleton and make two references to the same object and try to change the values of each of those reference objects. It will just leave it as the last one who tried to change the key property as seen in the example.
+
+> As you can both coach1 and coach2 come up with the same key **monkey** because coach2 changed it last.
+
+<img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/singleton_scope.png?raw=true">
+
+
+>If we tried to the same test with the scope as **prototype** we will see both objects having different values for the key because they point to different object entirely
+
+<img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/prototype_scope.png?raw=true">
+
+---
+
