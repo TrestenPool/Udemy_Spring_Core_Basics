@@ -109,3 +109,51 @@ And to assign a value is easy as: `value="${team.email}"`
 
 ---
 
+#### Bean Init and Destroy methods 
+:open_file_folder: bean_scope
+
+:page_facing_up: bean_scope-applicationContext.xml
+
+> When configuring your beans in the .xml file, you have the option to add a **init-method** & **destroy-method**.
+>> The **init-method** is invoked when the spring container first creates the bean, and the **destroy-method** is called when the **Spring Container** is shutting down.
+> These methods can have any access modifer ex. `public, private, protected`. These methods are specified during the configuration of the bean. An example of the execution can be seen below
+
+<img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/beanLifecyle.png?raw=true">
+
+:warning: Be Aware that the scope for the bean has to be **singleton** in order for the destroy method to be invoked. Meaning that the **destroy-method does not work if the bean scope is prototype**
+
+---
+
+### Spring Annotations
+---
+
+#### Basics About Annotations
+> Pros
+> + Less Code
+> + Minimizes XML Configuration
+
+> Cons
+> + Harder to manage since it is not defined in one location like the applicationContext.xml file
+> + Requires component scanning meaning it has to scan your entire project for components.
+
+> Development Process 
+> 1. Enable *recursive* component scanning in the Spring Config File 
+>> ` <context:compent-scan base-package="com.cib599.springDemo"\> `
+> 2. Add the **@Component** Annotation to your java classes
+>> ``` 
+>> @Component("coach1")
+>> public class BaseballCoach implements Coach{
+>>  @Override
+>>  public String getDailyWorkout(){
+>>    return "Got hit off of the Tee.";
+>>  }
+>> }
+>> ```
+>> If no bean ID is provided in this case **coach1** in @Component("coach1"), then Spring will create a bean with the default name of the class in camelCase. So in this case it would've been **baseballCoach**.
+> 3. Retrieve bean from the Spring Container
+>> `BaseballCoach coach = context.getBean("coach1", BaseballCoach.class);`
+
+
+
+
+--- 
