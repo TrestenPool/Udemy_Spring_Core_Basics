@@ -24,6 +24,8 @@ This repo separated different topics into different packages.
 >> Java Code
 >>> + [Java Code Basics](#3.1)
 >>> + [Defining beans and injecting dependencies manually in the config file instead of using @ComponentScan](#3.2)
+>>> + [Injecting values from .properties file (@PropertySource)](#3.3)
+
 
 ### XML Configuration
 ---
@@ -315,5 +317,30 @@ public class SportConfig {
 > // just like before
 > Coach coach = context.getBean("baseballCoach", Coach.class);
 > ```
+
+---
+
+#### Injecting Values from properties file <a id='3.3'></a>
+> Suppose we have a file named `sport.properties` with the following structure.
+>> ```
+>> team.email=Idropnukes@gmail.com
+>> team.name=Bomb Squad
+>> ```
+> All we do to load the properties file into the config class is use the `@PropertySource` tag.
+> And in order to reference the values in the properties file we use the `@Value` annotation.
+>> ```
+>> @Configuration
+>> @PropertySource("classpath:sport.properties")
+>> public class SportConfig {
+>>
+>>    @Bean
+>>    public Coach baseballCoach() {
+>>      BaseballCoach coach = new BaseballCoach();
+>>      coach.setName( @Value("${team.name}") );
+>>      return coach;
+>>    }
+>> }
+>> ```
+>> Once you have loaded the properties file into the config class, you can inject values into any java file with the `@Value` annotation, **Not** just in the config class.
 
 ---
