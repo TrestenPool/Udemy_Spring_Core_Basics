@@ -2,10 +2,33 @@
 This repo is for referencing back on Spring topics learned in the spring tutorial I learned on https://www.udemy.com/course/spring-hibernate-tutorial/
 This repo separated different topics into different packages.
 
+## Index of Topics
+> Spring Configuration
+>> XML
+>>> + [Configuring beans](#1.1)
+>>> + [Dependency Injection (constructor injection)](#1.2)
+>>> + [Dependency Injection (setter injection)](#1.3)
+>>> + [Injecting Literal Values](#1.4)
+>>> + [Injecting Literal Values from properties file](#1.5)
+>>> + [Bean Scope](#1.6)
+>>> + [Bean Init & Destroy methods](#1.7)
+
+>> Annotations
+>>> + [Annotation Basics](#2.1)
+>>> + [Dependency Injection (constructor) & @Qualifer annotation](#2.2)
+>>> + [Dependency Injection (setter) & @Qualifer annotation](#2.3)
+>>> + [Dependency Injection (field)](#2.4)
+>>> + [Bean Scope @Scope](#2.5)
+>>> + [Bean Lifecycle @PostConstruct & @PreDestroy](#2.6)
+
+>> Java Code
+>>> + [Java Code Basics](#3.1)
+>>> + [Defining beans and injecting dependencies manually in the config file instead of using @ComponentScan](#3.2)
+
 ### XML Configuration
 ---
 
-#### Configuring Java Beans
+#### Configuring Java Beans <a id='1.1'></a>
 :open_file_folder:javaBeans
 
 We have a Coach interface with a simple getDailyWorkout() that the different coaches implement.
@@ -32,7 +55,7 @@ And finally close the config file pointer with
 <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/javaBean_spring_app.png?raw=true" width="425" height="200">
 
 ---
-#### Dependency Injection (Constructor injection)
+#### Dependency Injection (Constructor injection) <a id='1.2'></a>
 :open_file_folder:dependencyInjection
 
 We have added a dependency being an object that implements the FortuneService interface. The FortuneService interface has one method `getFortune()` Two classes implement the interface being HappyFortuneService and HarshFortuneService. The Coach interface now has a method called `getDailyFortune()` that will call the private field fortuneService and print out its fortune.
@@ -48,7 +71,7 @@ And same as before we can call the methods on our coach object just like normal 
 
 ---
 
-#### Dependency Injection (Setter injection)
+#### Dependency Injection (Setter injection) <a id='1.3'></a>
 :open_file_folder:dependencyInjection
 
 In order to use setter based injection simply have a setter method in the Track Coach class:
@@ -61,7 +84,7 @@ To inject the dependency via the setter method we use `<property name="fortuneSe
 
 ---
 
-#### Injecting literal Values
+#### Injecting literal Values <a id='1.4'></a>
 
 If we wanted to inject literal values we would just use `<property>` tag with the `value` attribute specifying the value of the literal value shown below.
 
@@ -69,7 +92,7 @@ If we wanted to inject literal values we would just use `<property>` tag with th
 
 ---
 
-#### Injecting values from a properties file
+#### Injecting values from a properties file <a id='1.5'></a>
 :open_file_folder:dependencyInjection
 
 A .properties file was created named `sport.properties` in the same directory as the `applicationContext.xml` file
@@ -89,7 +112,7 @@ And to assign a value is easy as: `value="${team.email}"`
 
 ---
 
-#### Bean Scope (singleton vs prototype)
+#### Bean Scope (singleton vs prototype) <a id='1.6'></a>
 :open_file_folder: bean_scope
 
 :page_facing_up: bean_scope-applicationContext.xml
@@ -109,7 +132,7 @@ And to assign a value is easy as: `value="${team.email}"`
 
 ---
 
-#### Bean Init and Destroy methods 
+#### Bean Init and Destroy methods <a id='1.7'></a>
 :open_file_folder: bean_scope
 
 :page_facing_up: bean_scope-applicationContext.xml
@@ -127,7 +150,7 @@ And to assign a value is easy as: `value="${team.email}"`
 ### Spring Annotations
 ---
 
-#### Basics About Annotations
+#### Basics About Annotations <a id='2.1'></a>
 > Pros
 > + Less Code
 > + Minimizes XML Configuration
@@ -155,13 +178,13 @@ And to assign a value is easy as: `value="${team.email}"`
 
 --- 
 
-#### Constructor Injection & @Qualifer keyword
+#### Constructor Injection & @Qualifer keyword <a id='2.2'></a>
 > In this example we have the BaseballCoach having a constructor that takes in a Fortune. If there was only one fortune bean that we would not have to use the @Qualifer keyword. But since there are more than one class that implements the **Fortune** interface we have to specify in the BaseballCoach constructor the qualifying bean to be injected. In this case it is **`@Qualifer("happyFortune")`**
 > <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/pic3.png?raw=true">
 
 ---
 
-#### Setter Injection & @Qualifer keyword
+#### Setter Injection & @Qualifer keyword <a id='2.3'></a>
 > Similiarily to the example above the coach has a fortune field. We are able to inject the dependency into the setter method by using the **@Autowired** keyword above the setter method. Also since there are two classes that implement the Fortune interface `HappyFortune and MadFortune`, we have to use the **@Qualifer()** keyword along with the beanID as the parameters in order to inject the correct dependency.
 
 > :bulb:: It does not have to be named setFortune(), but any method name with the `@Autowired` keyword above it.
@@ -170,7 +193,7 @@ And to assign a value is easy as: `value="${team.email}"`
 
 ---
 
-#### Field Injection (Java Reflection)
+#### Field Injection (Java Reflection) <a id='2.4'></a>
 > We can inject dependencies by setting field values on your class directly (even private fields)
 > This is accomplished by using **Java Reflection**
 
@@ -188,7 +211,7 @@ And to assign a value is easy as: `value="${team.email}"`
 
 ---
 
-#### Bean Scope with Annotations
+#### Bean Scope with Annotations <a id='2.5'></a>
 > As with xml, we can also specify the bean scope with annotations. All you have to do is specify the bean scope with the **`@Scope()`** annotations under the **`@Component`** annotation.
 
 > Example:
@@ -201,7 +224,7 @@ And to assign a value is easy as: `value="${team.email}"`
 
 ---
 
-#### Bean LifeCycle with Annotations (@PostConstruct & @PreDestroy)
+#### Bean LifeCycle with Annotations (@PostConstruct & @PreDestroy) <a id='2.6'></a>
 > Similiar to the init-method and destroy-method in the xml configuration of the lifecycle of the bean we can also specify certain methods to run at the creation of the spring bean and at the end of the beans life.
 
 > These two annotations are **`@PostConstruct & @PreDestroy`**
@@ -233,7 +256,7 @@ And to assign a value is easy as: `value="${team.email}"`
 ### Spring Configuration with Java Code
 ---
 
-#### Steps in order to configure spring with only java code
+#### Steps in order to configure spring with only java code <a id='3.1'></a>
 1. Create a Java class and annotate as: **`@Configuration`** and add component scanning support: **`@ComponentScan`**
 
 ```
@@ -254,4 +277,43 @@ public class SportConfig {
 
 ---
 
-#### 
+#### Defining beans and injecting dependencies manually in the config file instead of using **@ComponentScan** <a id='3.2'></a>
+> If we wanted to define all of our beans in a config file in java like we did in the xml configuration then we have to define the beans in the config file and request them through the spring container like we normally do. In this case we do not need the `@ComponentScan` annotation to have spring create the beans in the spring container, we will do it manually.
+
+> Example:
+> 
+> **Creating the Bean**
+> ```
+> @Configuration
+> // no need for @ComponentScan
+> public class Config {
+>
+>   @Bean
+>   public FortuneService happyFortuneService() {
+>     HappyFortuneService happyFortuneService = new HappyFortuneService();
+>     return happyFortuneService;
+>   }
+>
+>   @Bean
+>   public FortuneService harshFortuneService() {
+>     HarshFortuneService harshFortuneService = new HarshFortuneService();
+>     return harshFortuneService;
+>   }
+>
+>   @Bean
+>   public Coach baseballCoach() {
+>     BaseballCoach baseballCoach = new BaseballCoach( happyFortuneService() ); // we can pass in the happyFortuneService() or the harshFortuneService()
+>     return baseballCoach;
+>   }
+> }
+> ```
+>
+> **Retrieving the Bean**
+> ```
+> AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+>
+> // just like before
+> Coach coach = context.getBean("baseballCoach", Coach.class);
+> ```
+
+---
