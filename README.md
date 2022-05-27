@@ -343,4 +343,7 @@ public class SportConfig {
 >> ```
 >> Once you have loaded the properties file into the config class, you can inject values into any java file with the `@Value` annotation, **Not** just in the config class.
 
+>> Like in this example where we inject the value into a field and let spring autowire it for us.
+>> <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/pic6.png?raw=true" width="425">
+
 ---
