@@ -26,6 +26,10 @@ This repo separated different topics into different packages.
 >>> + [Defining beans and injecting dependencies manually in the config file instead of using @ComponentScan](#3.2)
 >>> + [Injecting values from .properties file (@PropertySource)](#3.3)
 
+> Spring MVC
+>> Some Category
+>>> + [MVC Overview](#4.1)
+
 
 ### XML Configuration
 ---
@@ -345,5 +349,26 @@ public class SportConfig {
 
 >> Like in this example where we inject the value into a field and let spring autowire it for us.
 >> <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/pic6.png?raw=true" width="425">
+
+---
+
+## MVC
+---
+
+#### MVC Overview <a id='4.1'></a>
+> + MVC is a web application for building web apps in Java
+> + Based on Model view controller
+> + The **DispatcherServlet** acts as a front controller like it provides a single entry point for a client request to Spring MVC web application and forwards request to Spring MVC controllers for proccessing.
+> + The **DispatcherServlet** is an actual **Servlet** (it inherits from the **HttpServlet** base class).
+> The **handler method** is a method in a java class that **handles** incoming HTTP requests.
+> The **controller class** is a java class that contains these **handler** methods.
+
+> Components in Spring MVC Architecture
+> + **DispatcherServlet** ( Front Controller )
+> + Handler Mapping
+> + Controller
+> + ViewResolver
+> + View Engine
+> <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/pic8.png?raw=true">
 
 ---
