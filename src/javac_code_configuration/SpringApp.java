@@ -1,5 +1,6 @@
 package javac_code_configuration;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SpringApp {
@@ -10,5 +11,6 @@ public class SpringApp {
 
         System.out.println(baseballCoach.getDailyWorkout());
         System.out.println(baseballCoach.getDailyFortune());
+        System.out.println(baseballCoach.getTeamName());
     }
 }
