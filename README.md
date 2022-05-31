@@ -27,8 +27,9 @@ This repo separated different topics into different packages.
 >>> + [Injecting values from .properties file (@PropertySource)](#3.3)
 
 > Spring MVC
->> Some Category
+>> Overview and Configuration
 >>> + [MVC Overview](#4.1)
+>>> + [MVC Configuration](#4.2)
 
 
 ### XML Configuration
@@ -370,5 +371,69 @@ public class SportConfig {
 > + ViewResolver
 > + View Engine
 > <img src="https://github.com/TrestenPool/Udemy_Spring_Tutorial/blob/main/Screenshots/pic8.png?raw=true">
+
+---
+
+#### MVC Configuration <a id='4.2'></a>
+> Configuration of the **WEB-INF/web.xml**
+>> Step 1: Configure Spring MVC Dispatcher Servlet
+>>> The `<servlet>` tag is used to create the servlet along with the `<servlet-class>` in order to create a servlet of type **org.springframework.web.servlet.DispatcherServlet**
+
+>> Step 2: Setup URL mapping for the Spring MVC Dispatcher servlet
+>>> The `<servlet-mapping>` tag is used in order to setup the url mapping of `/` in this case all routes will be routed to the dispatcher servlet.
+
+>> ```
+>> <web-app>
+>>
+>>  <!--  STEP 1: Configure Spring MVC Dispatcher Servlet  -->
+>>  <servlet>
+>>    <servlet-name>dispatcher</servlet-name>
+>>    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+>> 
+>>  <!-- Initial parameters passed to the dispatcher servlet -->
+>>  <init-param>
+>>    <param-name>contextConfigLocation</param-name>
+>>    <param-value>/WEB-INF/spring-mvc-demo-servlet.xml</param-value>
+>>  </init-param>
+>> 
+>>    <load-on-startup>1</load-on-startup>
+>>  </servlet>
+>> 
+>>  <!--  STEP 2: Set up URL mapping for Spring MVC Dispatcher Servlet  -->
+>>  <servlet-mapping>
+>>    <servlet-name>dispatcher</servlet-name>
+>>    <url-pattern>/</url-pattern>
+>>  </servlet-mapping>
+>>
+>> </web-app>
+>> ```
+
+> Configuration of the **WEB-INF/spring-mvc-demo-servlet.xml**
+>> Step 3: Add support for component scanning
+>>> The `<context:component-scan>` tag is used to tell spring to use component scanning while specifiying the base package to scan recursively.
+
+>> Step 4: Add support for conversion, formatting and validation support
+>>> The `<mvc:annotation-driven/>` tag is used to tell spring to provide support for converstion, formatting and validation.
+
+>> Step 5:
+>>> Define the **Spring view resolver** with the `<bean>` annotation of class `org.springframework.web.servlet.view.InternalResourceViewResolver`.
+
+>> ```
+>> <beans>
+>>
+>>  <!-- STEP 3: Add support for component scanning -->
+>>  <context:component-scan base-package="com.luv2code.springdemo" />
+>>
+>>  <!-- STEP 4: Add support for conversion, formatting and validation support -->
+>>  <mvc:annotation-driven/>
+>>
+>>  <!-- STEP 5: Define Spring MVC view resolver -->
+>>  <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+>>    <property name="prefix" value="/WEB-INF/view/" />
+>>    <property name="suffix" value=".jsp" />
+>>  </bean>
+>> 
+>> </beans>
+>> ```
 
 ---
