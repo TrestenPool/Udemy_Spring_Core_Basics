@@ -382,31 +382,32 @@ public class SportConfig {
 >> Step 2: Setup URL mapping for the Spring MVC Dispatcher servlet
 >>> The `<servlet-mapping>` tag is used in order to setup the url mapping of `/` in this case all routes will be routed to the dispatcher servlet.
 
->> ```
->> <web-app>
->>
->>  <!--  STEP 1: Configure Spring MVC Dispatcher Servlet  -->
->>  <servlet>
->>    <servlet-name>dispatcher</servlet-name>
->>    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
->> 
->>  <!-- Initial parameters passed to the dispatcher servlet -->
->>  <init-param>
->>    <param-name>contextConfigLocation</param-name>
->>    <param-value>/WEB-INF/spring-mvc-demo-servlet.xml</param-value>
->>  </init-param>
->> 
->>    <load-on-startup>1</load-on-startup>
->>  </servlet>
->> 
->>  <!--  STEP 2: Set up URL mapping for Spring MVC Dispatcher Servlet  -->
->>  <servlet-mapping>
->>    <servlet-name>dispatcher</servlet-name>
->>    <url-pattern>/</url-pattern>
->>  </servlet-mapping>
->>
->> </web-app>
->> ```
+> **web.xml**
+> ```
+> <web-app>
+>
+>  <!--  STEP 1: Configure Spring MVC Dispatcher Servlet  -->
+>  <servlet>
+>    <servlet-name>dispatcher</servlet-name>
+>    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+> 
+>  <!-- Initial parameters passed to the dispatcher servlet -->
+>  <init-param>
+>    <param-name>contextConfigLocation</param-name>
+>    <param-value>/WEB-INF/spring-mvc-demo-servlet.xml</param-value>
+>  </init-param>
+> 
+>    <load-on-startup>1</load-on-startup>
+>  </servlet>
+> 
+>  <!--  STEP 2: Set up URL mapping for Spring MVC Dispatcher Servlet  -->
+>  <servlet-mapping>
+>    <servlet-name>dispatcher</servlet-name>
+>    <url-pattern>/</url-pattern>
+>  </servlet-mapping>
+>
+> </web-app>
+> ```
 
 > Configuration of the **WEB-INF/spring-mvc-demo-servlet.xml**
 >> Step 3: Add support for component scanning
@@ -418,22 +419,23 @@ public class SportConfig {
 >> Step 5:
 >>> Define the **Spring view resolver** with the `<bean>` annotation of class `org.springframework.web.servlet.view.InternalResourceViewResolver`.
 
->> ```
->> <beans>
->>
->>  <!-- STEP 3: Add support for component scanning -->
->>  <context:component-scan base-package="com.luv2code.springdemo" />
->>
->>  <!-- STEP 4: Add support for conversion, formatting and validation support -->
->>  <mvc:annotation-driven/>
->>
->>  <!-- STEP 5: Define Spring MVC view resolver -->
->>  <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
->>    <property name="prefix" value="/WEB-INF/view/" />
->>    <property name="suffix" value=".jsp" />
->>  </bean>
->> 
->> </beans>
->> ```
+> **spring-mvc-demo-servlet.xml**
+> ```
+> <beans>
+>
+>  <!-- STEP 3: Add support for component scanning -->
+>  <context:component-scan base-package="com.luv2code.springdemo" />
+>
+>  <!-- STEP 4: Add support for conversion, formatting and validation support -->
+>  <mvc:annotation-driven/>
+>
+>  <!-- STEP 5: Define Spring MVC view resolver -->
+>  <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+>    <property name="prefix" value="/WEB-INF/view/" />
+>    <property name="suffix" value=".jsp" />
+>  </bean>
+> 
+> </beans>
+> ```
 
 ---
